@@ -82,7 +82,7 @@ class _ProductListingWidgetState extends State<ProductListingWidget> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          'Awesome Store',
+          'NTUC',
           style: AppTheme.of(context).title1,
         ),
         elevation: 0,
