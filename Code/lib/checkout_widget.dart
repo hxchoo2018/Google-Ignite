@@ -18,6 +18,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   late List<Product> cartItems;
+  late double TotalPrice = 0.0;
 
   @override
   void initState() {
@@ -25,6 +26,9 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
     super.initState();
     setState(() {
       cartItems = BlocProvider.of<CartBloc>(context).items;
+      for(final item in cartItems){
+        TotalPrice += item.price * item.quantity;
+      }
     });
   }
 
@@ -181,6 +185,13 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                                           size: 20,
                                         ),
                                         onPressed: () {
+                                          TotalPrice = 0.0;
+                                          for(final item in cartItems){
+                                            if (item != cartItems[index]) {
+                                              TotalPrice +=
+                                                  item.price * item.quantity;
+                                            }
+                                          }
                                           BlocProvider.of<CartBloc>(context).add(RemoveProduct(cartItems[index]));
                                         },
                                       ),
@@ -191,69 +202,6 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                             );
                           });
                     }),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 16, 24, 4),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'Price Breakdown',
-                            style: AppTheme.of(context).bodyText2,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Base Price',
-                            style: AppTheme.of(context).subtitle2,
-                          ),
-                          Text(
-                            '\$156.00',
-                            style: AppTheme.of(context).subtitle1,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Taxes',
-                            style: AppTheme.of(context).subtitle2,
-                          ),
-                          Text(
-                            '\$24.20',
-                            style: AppTheme.of(context).subtitle1,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Cleaning Fee',
-                            style: AppTheme.of(context).subtitle2,
-                          ),
-                          Text(
-                            '\$40.00',
-                            style: AppTheme.of(context).subtitle1,
-                          ),
-                        ],
-                      ),
-                    ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 24),
                       child: Row(
@@ -280,7 +228,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                             ],
                           ),
                           Text(
-                            '\$230.20',
+                            '\$$TotalPrice',
                             style: AppTheme.of(context).title1,
                           ),
                         ],
@@ -311,7 +259,8 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
               ),
               alignment: AlignmentDirectional(0, -0.35),
               child: Text(
-                'Checkout (\$230.20)',
+                'Checkout (\$$TotalPrice)',
+
                 style: AppTheme.of(context).title2.override(
                       fontFamily: 'Poppins',
                       color: AppTheme.of(context).primaryBtnText,
