@@ -127,7 +127,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget> with TickerPr
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                     child: Text(
-                      'Detailed Product',
+                      ' ${widget.product.name}',
                       style: AppTheme.of(context).title1,
                     ),
                   ),
