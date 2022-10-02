@@ -3,11 +3,15 @@ import 'package:ecomm_app/product_listing_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'map.dart';
+import 'route_generator.dart';
+
 import 'bloc_observer.dart';
 
 void main() {
   Bloc.observer = SimpleBlocObserver();
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -21,12 +25,13 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Location of Nearby Stores',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: ProductListingWidget(),
+        home: MapPage(),
+        onGenerateRoute: RouteGenerator.generateRoute,
       ),
     );
   }
