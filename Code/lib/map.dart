@@ -28,10 +28,11 @@ class _MapPageState extends State<MapPage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Location of Nearby Stores',
-              //style: AppTheme.of(context).title1 -- > will try to change the font later
-              style: TextStyle(color: Colors.black)
+          title: Text(
+            'Location of Nearby Stores',
+            style: AppTheme.of(context).title1,
           ),
+          elevation: 0,
           backgroundColor: Colors.white,
         ),
         body: GoogleMap(
