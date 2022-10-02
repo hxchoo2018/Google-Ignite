@@ -30,8 +30,9 @@ class _MapPageState extends State<MapPage> {
         appBar: AppBar(
           title: const Text('Location of Nearby Stores',
               //style: AppTheme.of(context).title1 -- > will try to change the font later
+              style: TextStyle(color: Colors.black)
           ),
-          backgroundColor: Colors.blue[300],
+          backgroundColor: Colors.white,
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,
