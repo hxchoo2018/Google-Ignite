@@ -14,7 +14,6 @@ class RouteGenerator {
       // Validation of correct data type
           return MaterialPageRoute(
             builder: (_) => ProductListingWidget(
-              //listPlayerNames: args,
             ),
           );
       default:

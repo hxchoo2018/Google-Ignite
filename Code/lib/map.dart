@@ -40,8 +40,13 @@ class _MapPageState extends State<MapPage> {
             target: _center,
             zoom: 11.0,
           ),
-            markers: Set<Marker>.of([ Marker( markerId: MarkerId('1'), position: LatLng(1.3, 103.8 ), onTap: () { _onMarkerTapped(context); })])
-        ),
+            markers: Set<Marker>.of([
+              Marker(markerId: MarkerId('1'), position: LatLng(1.3, 103.8 ), onTap: () { _onMarkerTapped(context); }),
+              Marker(markerId: MarkerId('2'), position: LatLng(1.3110, 103.7883 ), onTap: () { _onMarkerTapped(context); }),
+              Marker(markerId: MarkerId('3'), position: LatLng(1.31478, 103.77156 ), onTap: () { _onMarkerTapped(context); })
+
+            ])
+    ),
       ),
     );
   }
