@@ -38,7 +38,8 @@ class _ProductListingWidgetState extends State<ProductListingWidget> {
         image:
             'https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         category:'vegetable',
-        description: 'Russet potatoes from ComCrop. Locally produced in Singapore.',
+        description: 'Russet potatoes from ComCrop. Locally produced in '
+            'Singapore.',
         price: 2.00),
 
     Product(
@@ -66,7 +67,16 @@ class _ProductListingWidgetState extends State<ProductListingWidget> {
             'https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
         category:'dairy',
         description: 'Natural milk from Farm Fresh',
-        price: 1.50)
+        price: 1.50),
+
+    Product(
+        id: 6,
+        name: 'Carrot',
+        image:
+        'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        category:'vegetable',
+        description: 'Natural Carrots from Kok Fah Technology Farm',
+        price: 1.00)
   ];
 
   @override

@@ -238,35 +238,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 ),
               ),
             ),
-            Container(
-              width: double.infinity,
-              height: 100,
-              decoration: BoxDecoration(
-                color: AppTheme.of(context).primaryColor,
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 4,
-                    color: Color(0x320E151B),
-                    offset: Offset(0, -2),
-                  )
-                ],
-                // borderRadius: BorderRadius.only(
-                //   bottomLeft: Radius.circular(0),
-                //   bottomRight: Radius.circular(0),
-                //   topLeft: Radius.circular(16),
-                //   topRight: Radius.circular(16),
-                // ),
-              ),
-              alignment: AlignmentDirectional(0, -0.35),
-              child: Text(
-                'Checkout (\$$TotalPrice)',
 
-                style: AppTheme.of(context).title2.override(
-                      fontFamily: 'Poppins',
-                      color: AppTheme.of(context).primaryBtnText,
-                    ),
-              ),
-            ),
           ],
         ),
       ),
