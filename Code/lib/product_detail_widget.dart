@@ -142,7 +142,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget> with TickerPr
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(16, 8, 16, 8),
                     child: Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
+                      ' ${widget.product.description}',
                       style: AppTheme.of(context).bodyText2,
                     ),
                   ),
