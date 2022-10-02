@@ -81,7 +81,7 @@ class _CheckoutWidgetState extends State<CheckoutWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                   child: Text(
-                    'Cart',
+                    'Shopping List',
                     style: AppTheme.of(context).title1,
                   ),
                 ),
