@@ -25,64 +25,48 @@ class _ProductListingWidgetState extends State<ProductListingWidget> {
   final List<Product> products = [
     Product(
         id: 1,
-        name: 'Champion',
-        image:
-            'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
-        price: 55.5),
+        name: 'Brocolli',
+        image:'https://images.unsplash.com/photo-1518164147695-36c13dd568f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        category:'vegetable',
+        description: 'from NTUC',
+        price: 2.0
+        ),
+
     Product(
         id: 2,
-        name: 'Stark',
+        name: 'Potato',
         image:
-            'https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80',
-        price: 65.5),
+            'https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        category:'vegetable',
+        description: 'from NTUC',
+        price: 5.0),
+
     Product(
         id: 3,
-        name: 'Coloury',
+        name: 'Salmon',
         image:
-            'https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        price: 75.5),
+            'https://images.unsplash.com/photo-1641898378373-0ef528eec4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+        category:'fish',
+        description: 'from NTUC',
+        price: 6.5),
+
     Product(
         id: 4,
-        name: 'Pinky',
+        name: 'Sirloin Steak',
         image:
-            'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-        price: 87.5),
+            'https://images.unsplash.com/photo-1603048297172-c92544798d5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+        category:'meat',
+        description: 'from NTUC',
+        price: 8.5),
+
     Product(
         id: 5,
-        name: 'Power',
+        name: 'Milk',
         image:
-            'https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1179&q=80',
-        price: 67.5),
-    Product(
-        id: 6,
-        name: 'Classic',
-        image:
-            'https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        price: 87.5),
-    Product(
-        id: 7,
-        name: 'Monk',
-        image:
-            'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80',
-        price: 50.5),
-    Product(
-        id: 8,
-        name: 'Piece',
-        image:
-            'https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        price: 99.5),
-    Product(
-        id: 9,
-        name: 'Baby',
-        image:
-            'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80',
-        price: 87.5),
-    Product(
-        id: 10,
-        name: 'Grown',
-        image:
-            'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        price: 144.5),
+            'https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
+        category:'dairy',
+        description: 'from NTUC',
+        price: 67.5)
   ];
 
   @override
@@ -98,7 +82,7 @@ class _ProductListingWidgetState extends State<ProductListingWidget> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          'Awesome Store',
+          'NTUC',
           style: AppTheme.of(context).title1,
         ),
         elevation: 0,
